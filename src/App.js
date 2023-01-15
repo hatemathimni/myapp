@@ -1,21 +1,16 @@
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {Form,Button,Navbar,Container,Nav} from 'react-bootstrap'
+import {Form,Button} from 'react-bootstrap'
+import  {Card} from "./components/cards"
+import {Address} from "./components/Address"
+import NavBar from './components/navbar'
+import ProfilPhoto from "./components/profilsphoto"
+import { FullName } from './components/FullName';
 
 function App() {
   return (
     <>
-    <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+    <NavBar/>
     <div className='form'>
     <Form>
     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -38,6 +33,9 @@ function App() {
     </Button>
   </Form>
   </div>
+  <Address/>
+  <ProfilPhoto/>
+  <FullName/>
   </>
   );
 }
